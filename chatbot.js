@@ -265,7 +265,7 @@ var ChatBot = function () {
                         return capabilities;
                     },
                     getSuggestUrl: function() {
-                        return 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/converse/suggest?mashape-key=' + apiKey + '&query=';
+                        return 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/converse/suggest?mashape-key=' + "ea1aca0f9b3046e7a3278b50e75d3065" + '&query=';
                     }
                 }
             },
