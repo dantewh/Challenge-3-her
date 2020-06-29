@@ -52,7 +52,9 @@ h2{
 }
 
 #windkmh, #windr{
-    margin: 29.88px
+    margin-top: 29.88px;
+    margin-left: 14px;
+    margin-right: 14px;
 }
 
 
@@ -74,7 +76,7 @@ h2{
     
 }
 #mapContainer{
-    padding: 40px;
+    padding: 0px;
     width: 800px; 
     height: 600px
     
@@ -87,9 +89,7 @@ h2{
     h2{
         font-size: 34px;
     }
-    #windkmh, #windr{
-    margin: 29.88px
-}
+    
 }
 
 @media (min-width: 767px) {
