@@ -11,7 +11,7 @@ window.onload = function myFunction() {
 //    .then(data => document.getElementById('windkmh').innerHTML = (data['weather'][0]['wind.speed']))
 
 
-fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
+fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
 })
     .then(res => res.json())
@@ -20,7 +20,7 @@ fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterd
 
 
 
-fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
+fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
 })
     .then(res => res.json())
