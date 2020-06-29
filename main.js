@@ -3,7 +3,7 @@ window.onload = function myFunction() {
 };
 
 
-fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
+fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
 })
     .then(res => res.json())
@@ -12,7 +12,7 @@ fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amster
 
 
 
-fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
+fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
 })
     .then(res => res.json())
