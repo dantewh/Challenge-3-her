@@ -1,15 +1,7 @@
+//weer//
 window.onload = function myFunction() {
     document.getElementsByClassName('icons')[0].style.visibility = 'hidden';
 };
-
-//fetch('http://api.openweathermap.org/data/2.5/weather?q=Amsterdam,nl&APPID=1f74c3eb0b46e9ee763ac67588491bc0&units=metric&lang=nl', {
-//    
-//})
-//
-//     .then(res => res.json())
-//
-//    .then(data => document.getElementById('windkmh').innerHTML = (data['weather'][0]['wind.speed']))
-
 
 fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
@@ -28,6 +20,8 @@ fetch('https://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amster
     .then(data => document.getElementById('windr').innerHTML = (data['liveweer'][0]['windr']))
 
 
+
+//map//
 var platform = new H.service.Platform({
   'apikey': 'vRBJhaT_Y0LX-KEs_3njwkWU75tnlpRpEROVBGbmGM8'
 });
@@ -65,3 +59,48 @@ window.addEventListener('resize', () => map.getViewPort().resize());
 window.onload = function () {
   addMarkersToMap(map);
 }      
+
+
+
+//chatbot//
+
+ var sampleConversation = [
+        "Hi",
+        "My name is Fry",
+        "Where is China?",
+        "What is the population of China?",
+        "Bye"
+    ];
+    var config = {
+        botName: 'Duck Duck Go Bot',
+        inputs: '#humanInput',
+        inputCapabilityListing: true,
+        engines: [ChatBot.Engines.duckduckgo()],
+        normalizer: [function( text ) {
+            return text.replace('!' , '');
+        } , 'trim' ],
+        addChatEntryCallback: function(entryDiv, text, origin) {
+            entryDiv.delay(200).slideDown();
+        }
+    };
+    ChatBot.init(config);
+    ChatBot.setBotName("Doomsdaybuddy");
+    ChatBot.addPattern("^hi$", "response", "Howdy, friend", undefined, "Say 'Hi' to be greeted back.");
+    ChatBot.addPattern("^bye$", "response", "See you later buddy", undefined, "Say 'Bye' to end the conversation.");
+    ChatBot.addPattern("(?:my name is|I'm|I am) (.*)", "response", "hi $1, thanks for talking to me today", function (matches) {
+        ChatBot.setHumanName(matches[1]);
+    },"Say 'My name is [your name]' or 'I am [name]' to be called that by the bot");
+    ChatBot.addPattern("(what is the )?meaning of life", "response", "42", undefined, "Say 'What is the meaning of life' to get the answer.");
+    ChatBot.addPattern("compute ([0-9]+) plus ([0-9]+)", "response", undefined, function (matches) {
+        ChatBot.addChatEntry("That would be "+(1*matches[1]+1*matches[2])+".","bot");
+    },"Say 'compute [number] plus [number]' to make the bot your math monkey");
+
+
+myLink.onclick = function hideInfo() {
+  var x = document.getElementById("chatBotCommandDescription");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
