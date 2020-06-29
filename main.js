@@ -86,6 +86,7 @@ window.onload = function () {
     ChatBot.init(config);
     ChatBot.setBotName("Doomsdaybuddy");
     ChatBot.addPattern("^hi$", "response", "Howdy, friend", undefined, "Say 'Hi' to be greeted back.");
+    ChatBot.addPattern("^spreek$", "response", "Sorry I don't realy speak Dutch", undefined, "No Dutch intergration");
     ChatBot.addPattern("^bye$", "response", "See you later buddy", undefined, "Say 'Bye' to end the conversation.");
     ChatBot.addPattern("(?:my name is|I'm|I am) (.*)", "response", "hi $1, thanks for talking to me today", function (matches) {
         ChatBot.setHumanName(matches[1]);
