@@ -216,6 +216,9 @@ h2{
     animation-fill-mode: forwards;
 }
 
+p{
+    font-size: 20px;
+}
 @keyframes appear {
     from {
         opacity: 0;
