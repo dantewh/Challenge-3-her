@@ -96,11 +96,3 @@ window.onload = function () {
     },"Say 'compute [number] plus [number]' to make the bot your math monkey");
 
 
-myLink.onclick = function hideInfo() {
-  var x = document.getElementById("chatBotCommandDescription");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
