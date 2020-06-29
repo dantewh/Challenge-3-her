@@ -152,6 +152,8 @@ var ChatBot = function () {
     return {
         Engines: {
             // the webknox API: http://webknox.com/api
+            
+            ///// webknox api kon ik niet verkrijgen/////
             webknox: function (apiKey) {
 
                 // patterns that the engine can resolve
@@ -214,7 +216,7 @@ var ChatBot = function () {
             },
 
             // the spoonacular API: http://spoonacular.com/food-api
-            spoonacular: function (apiKey) {
+            spoonacular: function (ea1aca0f9b3046e7a3278b50e75d3065) {
 
                 // patterns that the engine can resolve
                 var capabilities = [
@@ -525,3 +527,4 @@ var ChatBot = function () {
 
     }
 }();
+
