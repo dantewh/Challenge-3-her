@@ -2,6 +2,14 @@ window.onload = function myFunction() {
     document.getElementsByClassName('icons')[0].style.visibility = 'hidden';
 };
 
+//fetch('http://api.openweathermap.org/data/2.5/weather?q=Amsterdam,nl&APPID=1f74c3eb0b46e9ee763ac67588491bc0&units=metric&lang=nl', {
+//    
+//})
+//
+//     .then(res => res.json())
+//
+//    .then(data => document.getElementById('windkmh').innerHTML = (data['weather'][0]['wind.speed']))
+
 
 fetch('http://weerlive.nl/api/json-data-10min.php?key=4c9967ff90&locatie=Amsterdam&callback=?', {
     
