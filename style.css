@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+    
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    color: white;
+    font-family: 'Lato';
+    background: linear-gradient(45deg, #2ecc71, #16a085);
+    font-size: 30px;
+    
+    
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    border: 1px;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+    
+}
+
+.main {
+    border: 1px;
+    border-style: solid;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+	}
+
+h1{
+    padding: 10px;
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+
+#windkmh, #windr{
+    margin: 29.88px
+}
+
+
+.wrapper {
+    margin: auto;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+     "header"
+     "main";
+     
+}
+#article1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+#mapContainer{
+    padding: 40px;
+    width: 800px; 
+    height: 600px
+    
+}
+
+@media (min-width: 576px) { 
+    h1{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 34px;
+    }
+    #windkmh, #windr{
+    margin: 29.88px
+}
+}
+
+@media (min-width: 767px) {
+   h1{
+        font-size: 46px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    body{
+    font-size: 36px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1{
+        font-size: 48px;
+        
+    }
+    h2{
+        font-size: 38px;
+    }
+    body{
+    font-size: 38px;
+    }
+}
+
+@media (min-width: 1200px) {
+   h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    body{
+    font-size: 40px;
+    }
+}
