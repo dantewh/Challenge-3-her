@@ -216,7 +216,7 @@ var ChatBot = function () {
             },
 
             // the spoonacular API: http://spoonacular.com/food-api
-            spoonacular: function (ea1aca0f9b3046e7a3278b50e75d3065) {
+            spoonacular: function (apiKey) {
 
                 // patterns that the engine can resolve
                 var capabilities = [
@@ -234,7 +234,7 @@ var ChatBot = function () {
 
                 return {
                     react: function (query) {
-                        $.get('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/converse?mashape-key=' + apiKey + '&contextId=' + contextId + '&text=' + encodeURIComponent(query), function (data) {
+                        $.get('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/converse?mashape-key=' + "ea1aca0f9b3046e7a3278b50e75d3065" + '&contextId=' + contextId + '&text=' + encodeURIComponent(query), function (data) {
 
                             var content = data.answerText;
 
